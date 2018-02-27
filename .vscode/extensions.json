@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "flowtype.flow-for-vscode",
     "christian-kohler.path-intellisense",
     "vsmobile.vscode-react-native",
     "EQuimper.react-native-react-redux",

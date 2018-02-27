@@ -2,11 +2,11 @@
 
 Not standard expo application, only use it for previewing app.
 
-with
+with following libs:
 
 * RN 0.51, Redux, Form, React Navigation ...
 * NativeBase
-* flow type
+* flow type support
 * Expo (only for preview)
 * Jest
 
@@ -40,6 +40,12 @@ for generating `android/ios` direcotry, with following command
 react-native upgrade
 ```
 
-## vscode 
+## vscode
 
 I predefine some workspace settings in .vscode, and hope you like it.
+
+## comments
+
+without flow-type plugin, you will have better develop experence.
+
+As well known, you can't use any native module in Expo client app, just develop them with AS or XCode and run on real devices.
