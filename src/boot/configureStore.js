@@ -17,7 +17,7 @@ export default function configureStore(onCompletion: () => void): any {
 
   const store = createStore(persistedReducers, enhancer);
 
-  persistStore(store, onCompletion);
+  persistStore(store, {}, onCompletion);
 
   return store;
 }

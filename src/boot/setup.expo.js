@@ -1,6 +1,7 @@
 // @flow
 import * as Expo from "expo";
 import * as React from "react";
+import { View } from "react-native";
 import { StyleProvider } from "native-base";
 import { Provider } from "react-redux";
 
@@ -18,7 +19,7 @@ export default class Setup extends React.Component<Props, State> {
   constructor() {
     super();
     this.state = {
-      isLoading: false,
+      isLoading: true,
       store: configureStore(() => this.setState({ isLoading: false })),
       isReady: false,
     };
@@ -43,7 +44,7 @@ export default class Setup extends React.Component<Props, State> {
     return (
       <StyleProvider style={getTheme(variables)}>
         <Provider store={this.state.store}>
-          <App />
+          {this.state.isLoading ? <View /> : <App />}
         </Provider>
       </StyleProvider>
     );
