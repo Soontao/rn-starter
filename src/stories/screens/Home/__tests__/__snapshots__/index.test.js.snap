@@ -116,10 +116,10 @@ exports[`renders correctly 1`] = `
                   },
                   Object {
                     "color": "#007aff",
-                    "fontSize": 33,
+                    "fontSize": 30,
                     "marginLeft": 2,
                     "marginRight": 2,
-                    "marginTop": 2,
+                    "marginTop": 0,
                     "paddingTop": 2,
                   },
                 ],
@@ -181,26 +181,42 @@ exports[`renders correctly 1`] = `
   </View>
   <RCTScrollView
     automaticallyAdjustContentInsets={false}
+    contentContainerStyle={
+      Array [
+        Object {
+          "padding": undefined,
+        },
+        undefined,
+      ]
+    }
     contentInset={
       Object {
         "bottom": 0,
       }
     }
-    enableAutoAutomaticScroll={true}
+    enableAutomaticScroll={true}
     enableResetScrollToCoords={true}
     extraHeight={75}
     extraScrollHeight={0}
+    getScrollResponder={[Function]}
+    handleOnScroll={[Function]}
     keyboardDismissMode="interactive"
     keyboardOpeningTime={250}
     keyboardShouldPersistTaps="handled"
+    keyboardSpace={0}
     onScroll={[Function]}
+    resetKeyboardSpace={[Function]}
     resetScrollToCoords={
       Object {
         "x": 0,
         "y": 0,
       }
     }
-    scrollEventThrottle={0}
+    scrollEventThrottle={1}
+    scrollForExtraHeightOnAndroid={[Function]}
+    scrollToEnd={[Function]}
+    scrollToFocusedInput={[Function]}
+    scrollToPosition={[Function]}
     showsVerticalScrollIndicator={true}
     style={
       Object {
@@ -208,6 +224,7 @@ exports[`renders correctly 1`] = `
         "flex": 1,
       }
     }
+    viewIsInsideTabBar={false}
     virtual={undefined}
   >
     <View>

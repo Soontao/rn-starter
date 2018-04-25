@@ -1,5 +1,7 @@
 {
   "javascript.validate.enable": false,
   "editor.tabSize": 2,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "editor.fontSize": 16,
+  "files.eol": "\n"
 }

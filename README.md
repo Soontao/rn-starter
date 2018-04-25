@@ -4,9 +4,9 @@ Not standard expo application, only use it for previewing app.
 
 with following libs:
 
-* RN 0.51, Redux, Form, React Navigation ...
+* RN 0.54, Redux (with persist), Form, React Navigation ...
 * NativeBase
-* flow type support
+* flow type check
 * Expo (only for preview)
 * Jest
 

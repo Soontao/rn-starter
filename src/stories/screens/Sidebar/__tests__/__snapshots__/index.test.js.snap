@@ -12,26 +12,42 @@ exports[`renders correctly 1`] = `
 >
   <RCTScrollView
     automaticallyAdjustContentInsets={false}
+    contentContainerStyle={
+      Array [
+        Object {
+          "padding": undefined,
+        },
+        undefined,
+      ]
+    }
     contentInset={
       Object {
         "bottom": 0,
       }
     }
-    enableAutoAutomaticScroll={true}
+    enableAutomaticScroll={true}
     enableResetScrollToCoords={true}
     extraHeight={75}
     extraScrollHeight={0}
+    getScrollResponder={[Function]}
+    handleOnScroll={[Function]}
     keyboardDismissMode="interactive"
     keyboardOpeningTime={250}
     keyboardShouldPersistTaps="handled"
+    keyboardSpace={0}
     onScroll={[Function]}
+    resetKeyboardSpace={[Function]}
     resetScrollToCoords={
       Object {
         "x": 0,
         "y": 0,
       }
     }
-    scrollEventThrottle={0}
+    scrollEventThrottle={1}
+    scrollForExtraHeightOnAndroid={[Function]}
+    scrollToEnd={[Function]}
+    scrollToFocusedInput={[Function]}
+    scrollToPosition={[Function]}
     showsVerticalScrollIndicator={true}
     style={
       Object {
@@ -39,6 +55,7 @@ exports[`renders correctly 1`] = `
         "flex": 1,
       }
     }
+    viewIsInsideTabBar={false}
     virtual={undefined}
   >
     <View>
@@ -105,14 +122,7 @@ exports[`renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                },
-                undefined,
-              ]
-            }
+            style={null}
             testID={undefined}
             tvParallaxProperties={undefined}
           >
@@ -122,13 +132,13 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#fff",
+                  "backgroundColor": "transparent",
                   "borderBottomWidth": 0.5,
                   "borderColor": "#c9c9c9",
                   "flexDirection": "row",
-                  "marginLeft": 15,
+                  "marginLeft": 16,
                   "paddingBottom": 13,
-                  "paddingRight": 15,
+                  "paddingRight": 16,
                   "paddingTop": 13,
                 }
               }
@@ -169,14 +179,7 @@ exports[`renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                },
-                undefined,
-              ]
-            }
+            style={null}
             testID={undefined}
             tvParallaxProperties={undefined}
           >
@@ -186,13 +189,13 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#fff",
+                  "backgroundColor": "transparent",
                   "borderBottomWidth": 0.5,
                   "borderColor": "#c9c9c9",
                   "flexDirection": "row",
-                  "marginLeft": 15,
+                  "marginLeft": 16,
                   "paddingBottom": 13,
-                  "paddingRight": 15,
+                  "paddingRight": 16,
                   "paddingTop": 13,
                 }
               }
@@ -233,14 +236,7 @@ exports[`renders correctly 1`] = `
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                },
-                undefined,
-              ]
-            }
+            style={null}
             testID={undefined}
             tvParallaxProperties={undefined}
           >
@@ -250,13 +246,13 @@ exports[`renders correctly 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#fff",
+                  "backgroundColor": "transparent",
                   "borderBottomWidth": 0.5,
                   "borderColor": "#c9c9c9",
                   "flexDirection": "row",
-                  "marginLeft": 15,
+                  "marginLeft": 16,
                   "paddingBottom": 13,
-                  "paddingRight": 15,
+                  "paddingRight": 16,
                   "paddingTop": 13,
                 }
               }
