@@ -32,6 +32,8 @@ Your shell will show a QR code after a moment, and use [Expo App](https://expo.i
 
 change the name field in `package.json`, `app.json` & `index.js`, and using vscode to replace features will be easier, please do not use symbols in name, for example `-`
 
+or just use `npm run newName` and input newName, then, related js files will be changed.
+
 ## generate native app directory
 
 for generating `android/ios` direcotry, with following command

@@ -26,6 +26,7 @@
     "ios": "react-native run-ios",
     "test": "yarn jest && flow && eslint .",
     "jest": "node node_modules/jest/bin/jest.js",
+    "newName": "node .scripts/changeName.js",
     "precommit": "yarn test"
   },
   "jest": {

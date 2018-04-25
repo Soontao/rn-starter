@@ -3,6 +3,7 @@
     "christian-kohler.path-intellisense",
     "vsmobile.vscode-react-native",
     "EQuimper.react-native-react-redux",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "naumovs.color-highlight"
   ]
 }
