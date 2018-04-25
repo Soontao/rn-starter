@@ -19,18 +19,20 @@ export interface Props {
   navigation: any;
   list: any;
 }
-export interface State {}
+export interface State { }
 class Home extends React.Component<Props, State> {
   render() {
     return (
       <Container style={styles.container}>
         <Header>
           <Left>
-            <Button transparent>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Icon
                 active
                 name="menu"
-                onPress={() => this.props.navigation.navigate("DrawerOpen")}
               />
             </Button>
           </Left>

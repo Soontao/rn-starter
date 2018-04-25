@@ -12,7 +12,7 @@ const minLength = min => value =>
   value && value.length < min ? `Must be ${min} characters or more` : undefined;
 const minLength8 = minLength(8);
 const email = value =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
+  value && !/^[A-Z0-9]*/i.test(value)
     ? "Invalid email address"
     : undefined;
 const alphaNumeric = value =>
@@ -23,7 +23,7 @@ const alphaNumeric = value =>
 export interface Props {
   navigation: any;
 }
-export interface State {}
+export interface State { }
 class LoginForm extends React.Component<Props, State> {
   textInput: any;
 

@@ -8,7 +8,7 @@ export interface Props {
 	loginForm: any,
 	onLogin: Function,
 }
-export interface State {}
+export interface State { }
 
 class Login extends React.Component<Props, State> {
 	render() {
@@ -17,15 +17,10 @@ class Login extends React.Component<Props, State> {
 				<Header style={{ height: 200 }}>
 					<Body style={{ alignItems: "center" }}>
 						<Icon name="flash" style={{ fontSize: 104 }} />
-						<Title>ReactNativeSeed.com</Title>
-						<View padder>
-							<Text style={{ color: Platform.OS === "ios" ? "#000" : "#FFF" }}>
-								Build Something Amazing
-							</Text>
-						</View>
+						<Title>React Native Starter</Title>
 					</Body>
 				</Header>
-				<Content>
+				<Content scrollEnabled={false} >
 					{this.props.loginForm}
 					<View padder>
 						<Button block onPress={() => this.props.onLogin()}>
@@ -36,12 +31,8 @@ class Login extends React.Component<Props, State> {
 				<Footer style={{ backgroundColor: "#F8F8F8" }}>
 					<View style={{ alignItems: "center", opacity: 0.5, flexDirection: "row" }}>
 						<View padder>
-							<Text style={{ color: "#000" }}>Made with love at </Text>
+							<Text style={{ color: "#000" }}>From Open Source Community</Text>
 						</View>
-						<Image
-							source={{ uri: "https://geekyants.com/images/logo-dark.png" }}
-							style={{ width: 422 / 4, height: 86 / 4 }}
-						/>
 					</View>
 				</Footer>
 			</Container>
