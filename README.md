@@ -1,16 +1,18 @@
-# React Native with Expo
+# React Native starter with Expo
 
 Not standard expo application, only use it for previewing app.
 
 with following libs:
 
-* RN 0.54, Redux (with persist), Form, React Navigation ...
-* NativeBase
+* RN 0.55, Redux (with persist), Form, React Navigation ...
+* NativeBase components
 * flow type check
-* Expo (only for preview)
-* Jest
+* Expo 27 (only for preview)
+* Jest unit tests
 
 ## install
+
+**please make sure your nodejs version >= 6**
 
 clone this repo & npm i
 
@@ -34,7 +36,7 @@ change the name field in `package.json`, `app.json` & `index.js`, and using vsco
 
 or just use `npm run newName` and input newName, then, related js files will be changed.
 
-## generate native app directory
+## generate native app projects
 
 for generating `android/ios` direcotry, with following command
 

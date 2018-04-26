@@ -16,6 +16,7 @@ export interface State {
   isReady: boolean,
 }
 export default class Setup extends React.Component<Props, State> {
+
   constructor() {
     super();
     this.state = {
@@ -24,9 +25,11 @@ export default class Setup extends React.Component<Props, State> {
       isReady: false,
     };
   }
+
   componentWillMount() {
     this.loadFonts();
   }
+
   async loadFonts() {
     await Expo.Font.loadAsync({
       Roboto: require("native-base/Fonts/Roboto.ttf"),

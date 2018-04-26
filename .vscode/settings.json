@@ -2,6 +2,9 @@
   "javascript.validate.enable": false,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "files.eol": "\n",
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
 }

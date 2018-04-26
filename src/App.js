@@ -7,6 +7,7 @@ import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
 import { Loading } from "./components/EasyLoading";
+import "./library/NetworkDebugger";
 
 const Drawer = DrawerNavigator(
 	{

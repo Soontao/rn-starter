@@ -1,5 +1,9 @@
 {
   "name": "rnstarter",
+  "description": "React Native Project",
+  "author": {
+    "name": "Theo Sun"
+  },
   "version": "1.1.0",
   "private": true,
   "main": "index.expo.js",
@@ -7,19 +11,18 @@
     "node": "8"
   },
   "devDependencies": {
-    "babel-eslint": "8.1.0",
-    "babel-jest": "^22.4.3",
+    "babel-eslint": "8.2.3",
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "eslint": "4.14.0",
-    "eslint-plugin-flowtype": "2.40.1",
-    "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "7.5.1",
+    "eslint": "4.19.1",
+    "eslint-plugin-flowtype": "2.46.3",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "7.7.0",
     "eslint-plugin-react-native": "3.2.0",
-    "flow-bin": "0.62.0",
-    "flow-typed": "2.2.3",
+    "flow-bin": "0.70.0",
+    "flow-typed": "2.4.0",
     "husky": "0.14.3",
-    "jest": "^22.2.2",
+    "jest": "22.4.3",
     "react-native-scripts": "1.13.2",
     "react-test-renderer": "16.3.2"
   },
@@ -37,9 +40,6 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|lottie-react-native|expo|react-native-maps|react-native-svg|react-native-branch|native-base-shoutem-theme|react-native-easy-grid|react-native-drawer|react-native-vector-icons|react-native-keyboard-aware-scroll-view|react-navigation|native-base|@expo|react-native-scrollable-tab-view|react-native-iphone-x-helper)/)"
     ],
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
     "verbose": true,
     "moduleNameMapper": {
       "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
@@ -47,17 +47,17 @@
     }
   },
   "dependencies": {
-    "expo": "26",
-    "lodash": "4.17.4",
-    "native-base": "^2.4.2",
-    "react": "16.3.0-alpha.1",
-    "react-native": "0.54",
+    "expo": "27.0.1",
+    "lodash": "4.17.10",
+    "native-base": "2.4.2",
+    "react": "16.3.1",
+    "react-native": "0.55.3",
     "react-navigation": "1.5.11",
-    "react-redux": "5.0.6",
-    "redux": "3.7.2",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-form": "7.2.0",
-    "redux-persist": "5.4.0",
+    "react-redux": "5.0.7",
+    "redux": "^3.0.0",
+    "redux-devtools-extension": "2.13.2",
+    "redux-form": "7.3.0",
+    "redux-persist": "5.9.1",
     "redux-thunk": "2.2.0"
   },
   "license": "MIT"
