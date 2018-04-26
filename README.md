@@ -1,8 +1,6 @@
 # React Native starter with Expo
 
 [![CircleCI](https://circleci.com/gh/Soontao/rn-starter/tree/master.svg?style=shield)](https://circleci.com/gh/Soontao/rn-starter/tree/master)
-[![GitHub license](https://img.shields.io/github/license/Soontao/rn-starter.svg)](https://github.com/Soontao/rn-starter)
-[![GitHub issues](https://img.shields.io/github/issues/Soontao/rn-starter.svg)](https://github.com/Soontao/rn-starter/issues)
 
 Not standard expo application, only use it for previewing app.
 
@@ -13,6 +11,8 @@ with following libs:
 * flow type check
 * Expo 27 (only for preview)
 * Jest unit tests
+
+CI tested with node v6,7,8,9
 
 ## install
 

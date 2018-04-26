@@ -2,6 +2,14 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
+workflows:
+  version: 2
+  node-multi-build:
+    jobs:
+      - node-v6
+      - node-v7
+      - node-v8
+      - node-v9
 version: 2
 jobs:
   build:
@@ -30,4 +38,19 @@ jobs:
       # run tests!
       - run: yarn test
 
-
+  node-v6:
+    <<: *node-base
+    docker:
+      - image: node:6
+  node-v7:
+    <<: *node-base
+    docker:
+      - image: node:7
+  node-v8:
+    <<: *node-base
+    docker:
+      - image: node:8
+  node-v9:
+    <<: *node-base
+    docker:
+      - image: node:9
