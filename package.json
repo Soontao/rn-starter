@@ -27,10 +27,10 @@
     "start": "react-native-scripts start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "yarn jest && flow && eslint .",
+    "test": "npm run jest && flow && eslint .",
     "jest": "node node_modules/jest/bin/jest.js",
     "newName": "node .scripts/changeName.js",
-    "precommit": "yarn test"
+    "precommit": "npm run test"
   },
   "jest": {
     "preset": "react-native",

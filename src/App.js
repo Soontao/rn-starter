@@ -1,11 +1,12 @@
 // @flow
 import React from "react";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
-import { Root } from "native-base";
+import { Root, Toast, ActionSheet } from "native-base";
 import Login from "./container/LoginContainer";
 import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
+import { Loading } from "./components/EasyLoading";
 
 const Drawer = DrawerNavigator(
 	{
@@ -32,5 +33,8 @@ const App = StackNavigator(
 export default () => (
 	<Root>
 		<App />
+		<Loading />
+		<Toast ref={c => { Toast.toastInstance = c; }} />
+		<ActionSheet ref={c => { ActionSheet.actionsheetInstance = c; }} />
 	</Root>
 );
