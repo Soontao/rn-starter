@@ -8,7 +8,7 @@
   "private": true,
   "main": "index.expo.js",
   "engines": {
-    "node": "8"
+    "node": ">=6"
   },
   "devDependencies": {
     "babel-eslint": "8.2.3",
