@@ -10,11 +10,12 @@ workflows:
       - node-v7
       - node-v8
       - node-v9
+
 version: 2
 jobs:
-  build:
+  node-base: &node-base
     docker:
-      - image: circleci/node:8
+      - image: node
       
     working_directory: ~/repo
 
