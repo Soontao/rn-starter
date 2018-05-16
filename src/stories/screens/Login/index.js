@@ -2,6 +2,7 @@
 import * as React from "react";
 import { Image, Platform } from "react-native";
 import { Container, Content, Header, Body, Title, Button, Text, View, Icon, Footer } from "native-base";
+import Getui from "react-native-getui";
 
 export interface Props {
 	loginForm: any,
@@ -10,6 +11,15 @@ export interface Props {
 export interface State { }
 
 class Login extends React.Component<Props, State> {
+
+	componentWillMount() {
+		Getui.bindAlias("test");
+	}
+
+	componentWillUnmount() {
+		Getui.unbindAlias("test");
+		Getui.destroy();
+	}
 
 	render() {
 		return (

@@ -6133,6 +6133,10 @@ react-native-gesture-handler@1.0.0-alpha.41:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-getui@^1.1.22:
+  version "1.1.22"
+  resolved "http://registry.npm.taobao.org/react-native-getui/download/react-native-getui-1.1.22.tgz#33efe1b7da918dc00d562d0df2611a2201fb2e27"
+
 react-native-iphone-x-helper@^1.0.1:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/react-native-iphone-x-helper/download/react-native-iphone-x-helper-1.0.2.tgz#7dbca530930f7c1ce8633cc8fd13ba94102992e1"

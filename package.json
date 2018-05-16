@@ -27,13 +27,13 @@
     "react-test-renderer": "16.3.2"
   },
   "scripts": {
+    "GetuiConfigure": "node node_modules/react-native-getui/GetuiConfiguration.js",
     "start": "react-native-scripts start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "npm run jest && flow && eslint .",
     "jest": "node node_modules/jest/bin/jest.js",
-    "newName": "node .scripts/changeName.js",
-    "precommit": "npm run test"
+    "newName": "node .scripts/changeName.js"
   },
   "jest": {
     "preset": "react-native",
@@ -52,6 +52,7 @@
     "native-base": "2.4.2",
     "react": "16.3.1",
     "react-native": "0.55.3",
+    "react-native-getui": "^1.1.22",
     "react-navigation": "1.5.11",
     "react-redux": "5.0.7",
     "redux": "^3.0.0",

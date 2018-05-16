@@ -3,6 +3,7 @@ import * as React from "react";
 import { Item, Input, Icon, Toast, Form } from "native-base";
 import { Field, reduxForm } from "redux-form";
 import Login from "../../stories/screens/Login";
+import Getui from "react-native-getui";
 
 const required = value => (value ? undefined : "Required");
 const maxLength = max => value =>
@@ -42,7 +43,7 @@ class LoginForm extends React.Component<Props, State> {
     );
   }
 
-  login() {
+  login = () => {
     if (this.props.valid) {
       this.props.navigation.navigate("Drawer");
     } else {
