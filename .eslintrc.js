@@ -1,4 +1,4 @@
-{
+module.exports = {
   "root": true,
   "parser": "babel-eslint",
   "env": {
@@ -11,6 +11,8 @@
     "react"
   ],
   "globals": {
+    "Config":true,
+    "__BUILD_ENV__": true,
     "__DEV__": true,
     "__dirname": false,
     "__fbBatchedBridgeConfig": false,

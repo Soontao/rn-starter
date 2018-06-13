@@ -1,6 +1,5 @@
 // @flow
 import * as React from "react";
-import { Image, Platform } from "react-native";
 import { Container, Content, Header, Body, Title, Button, Text, View, Icon, Footer } from "native-base";
 
 export interface Props {
@@ -31,7 +30,7 @@ class Login extends React.Component<Props, State> {
 				<Footer style={{ backgroundColor: "#F8F8F8" }}>
 					<View style={{ alignItems: "center", opacity: 0.5, flexDirection: "row" }}>
 						<View padder>
-							<Text style={{ color: "#000" }}>From Open Source Community</Text>
+							<Text style={{ color: "#000" }}>{Config.LOGIN_LABEL}</Text>
 						</View>
 					</View>
 				</Footer>

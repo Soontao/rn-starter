@@ -6,8 +6,8 @@ import Login from "./container/LoginContainer";
 import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
-import { Loading } from "./components/EasyLoading";
 import "./library/NetworkDebugger";
+import "./library/config";
 
 const Drawer = DrawerNavigator(
 	{
@@ -34,7 +34,6 @@ const App = StackNavigator(
 export default () => (
 	<Root>
 		<App />
-		<Loading />
 		<Toast ref={c => { Toast.toastInstance = c; }} />
 		<ActionSheet ref={c => { ActionSheet.actionsheetInstance = c; }} />
 	</Root>

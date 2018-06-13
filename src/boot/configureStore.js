@@ -1,7 +1,7 @@
 // @flow
 import { AsyncStorage } from "react-native";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { createStore, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import reducer from "../reducers";

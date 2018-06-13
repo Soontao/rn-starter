@@ -24,7 +24,8 @@
     "husky": "0.14.3",
     "jest": "22.4.3",
     "react-native-scripts": "1.13.2",
-    "react-test-renderer": "16.3.2"
+    "react-test-renderer": "16.3.2",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3"
   },
   "scripts": {
     "start": "react-native-scripts start",
@@ -49,7 +50,7 @@
   "dependencies": {
     "expo": "27.0.1",
     "lodash": "4.17.10",
-    "native-base": "2.4.2",
+    "native-base": "^2.4.5",
     "react": "16.3.1",
     "react-native": "0.55.3",
     "react-navigation": "1.5.11",

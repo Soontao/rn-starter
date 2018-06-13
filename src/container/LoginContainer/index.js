@@ -2,6 +2,7 @@
 import * as React from "react";
 import { Item, Input, Icon, Toast, Form } from "native-base";
 import { Field, reduxForm } from "redux-form";
+import { NavigationActions, NavigationScreenProps } from "react-navigation";
 import Login from "../../stories/screens/Login";
 
 const required = value => (value ? undefined : "Required");
@@ -20,11 +21,12 @@ const alphaNumeric = value =>
     ? "Only alphanumeric characters"
     : undefined;
 
-export interface Props {
-  navigation: any;
+export interface Props extends NavigationScreenProps {
 }
 export interface State { }
-class LoginForm extends React.Component<Props, State> {
+
+@reduxForm({ form: "login" })
+class LoginContainer extends React.Component<Props, State> {
   textInput: any;
 
   renderInput({ input, label, type, meta: { touched, error, warning } }) {
@@ -44,7 +46,10 @@ class LoginForm extends React.Component<Props, State> {
 
   login() {
     if (this.props.valid) {
-      this.props.navigation.navigate("Drawer");
+      this.props.navigation.dispatch(NavigationActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({ routeName: "Drawer" })],
+      }));
     } else {
       Toast.show({
         text: "Enter Valid Username & password!",
@@ -79,7 +84,5 @@ class LoginForm extends React.Component<Props, State> {
     );
   }
 }
-const LoginContainer = reduxForm({
-  form: "login"
-})(LoginForm);
+
 export default LoginContainer;
