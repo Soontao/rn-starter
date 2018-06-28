@@ -5,10 +5,14 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import reducer from "../reducers";
+import { createRavenMiddleware } from "../library/Sentry/middleware";
 
 export default function configureStore(onCompletion: () => void): any {
   const enhancer = composeWithDevTools(
-    applyMiddleware(thunk),
+    applyMiddleware(
+      thunk,
+      createRavenMiddleware(),
+    ),
   );
 
   const persistedReducers = persistReducer({

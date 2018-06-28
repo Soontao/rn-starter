@@ -6,8 +6,10 @@ import Login from "./container/LoginContainer";
 import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
+import { ErrorFallback } from "./components/ErrorFallback";
 import "./library/NetworkDebugger";
 import "./library/config";
+import "./library/Sentry/index";
 
 const Drawer = DrawerNavigator(
 	{
@@ -31,9 +33,12 @@ const App = StackNavigator(
 	}
 );
 
+
 export default () => (
 	<Root>
-		<App />
+		<ErrorFallback>
+			<App />
+		</ErrorFallback>
 		<Toast ref={c => { Toast.toastInstance = c; }} />
 		<ActionSheet ref={c => { ActionSheet.actionsheetInstance = c; }} />
 	</Root>

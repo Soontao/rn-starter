@@ -25,10 +25,13 @@ const mapStateToProps = state => ({
 
 @connect(mapStateToProps, bindAction)
 class HomeContainer extends React.Component<Props, State> {
+
 	componentDidMount() {
 		this.props.fetchList(datas);
 	}
+
 	render() {
+		throw new Error("error what happened");
 		return <Home navigation={this.props.navigation} list={this.props.data} />;
 	}
 }

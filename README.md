@@ -11,6 +11,7 @@ with following libs:
 * flow type check
 * Expo 27 (only for preview)
 * Jest unit tests
+* Sentry error log
 
 CI tested with node v6,7,8,9
 
@@ -42,15 +43,33 @@ or just use `npm run newName` and input newName, then, related js files will be 
 
 ## generate native app projects
 
-for generating `android/ios` direcotry, with following command
+for generating `android/ios` directory, with following command
 
 ```bash
 react-native upgrade
 ```
 
-## vscode
+## vscode config
 
-I predefine some workspace settings in .vscode, and hope you like it.
+I pre-defined some workspace settings in .vscode, and hope you like it.
+
+## sentry error log
+
+I introduced Sentry in this project for error log, for your own project, please change the DSN of `library/Sentry/index.js`, and use 
+
+* Sentry.captureMessage
+* Sentry.captureException
+* Sentry.captureBreadcrumb
+
+methods to upload some messages to sentry server.
+
+And you can use 
+
+* Sentry.setUserContext
+* Sentry.setTagsContext
+* Sentry.setVersion
+
+methods to set messages context env
 
 ## comments
 
