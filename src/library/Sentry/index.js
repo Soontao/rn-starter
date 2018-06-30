@@ -1,13 +1,12 @@
 import Raven from "raven-js";
 import { Platform } from "react-native";
-import { filter, split } from "lodash";
 
 /**
  * please change this DSN token config in your own APP
  */
 
 Raven
-  .config("https://c875869102c44ec28c56e27d4005380a:6aceab1cbb694d8a9addfc276449f6fd@sentry.fornever.org/2", {
+  .config("https://358f593f19344f219d06a59b6321f17d:32f6820621b147f59f66d5510ff0ffe3@sentry.fornever.org/2", {
     allowSecretKey: true,
     autoBreadcrumbs: {
       xhr: false
