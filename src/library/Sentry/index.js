@@ -8,9 +8,8 @@ import { Platform } from "react-native";
 Raven
   .config("https://358f593f19344f219d06a59b6321f17d:32f6820621b147f59f66d5510ff0ffe3@sentry.fornever.org/2", {
     allowSecretKey: true,
-    autoBreadcrumbs: {
-      xhr: false
-    },
+    maxBreadcrumbs: 20,
+    maxMessageLength: 200,
     dataCallback: data => {
       data.contexts = data.contexts || {};
 
