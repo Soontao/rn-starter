@@ -17,7 +17,6 @@ export function createRavenMiddleware(cfg = {}, options = {}) {
       Raven.captureBreadcrumb({
         category: "redux",
         message: action.type,
-        data: store.getState(),
       });
 
       return next(action);

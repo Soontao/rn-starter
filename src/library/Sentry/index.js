@@ -9,9 +9,8 @@ import { Config } from "../Config";
 Raven
   .config(Config.SENTRY_URL, {
     allowSecretKey: true,
-    autoBreadcrumbs: {
-      xhr: false
-    },
+    maxBreadcrumbs: 20,
+    maxMessageLength: 200,
     dataCallback: data => {
       data.contexts = data.contexts || {};
 
