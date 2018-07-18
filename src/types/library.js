@@ -1,5 +1,6 @@
 // @flow
 
-declare var Config: {
-  LOGIN_LABEL: string
+export type ConfigType = {
+  LOGIN_LABEL: string,
+  SENTRY_URL: string,
 }

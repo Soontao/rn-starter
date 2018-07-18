@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 import { connect } from "react-redux";
-import Home from "../../stories/screens/Home";
+import Home from "../../screens/Home";
 import datas from "./data";
 import { fetchList } from "./actions";
 

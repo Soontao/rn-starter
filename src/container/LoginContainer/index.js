@@ -3,7 +3,7 @@ import * as React from "react";
 import { Item, Input, Icon, Toast, Form } from "native-base";
 import { Field, reduxForm } from "redux-form";
 import { NavigationActions, NavigationScreenProps } from "react-navigation";
-import Login from "../../stories/screens/Login";
+import Login from "../../screens/Login";
 
 const required = value => (value ? undefined : "Required");
 const maxLength = max => value =>

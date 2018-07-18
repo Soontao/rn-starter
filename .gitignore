@@ -54,3 +54,7 @@ buck-out/
 
 # expo
 .expo
+
+# lock
+package-lock.json
+yarn.lock

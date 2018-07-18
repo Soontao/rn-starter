@@ -1,6 +1,6 @@
 // @flow
 import * as React from "react";
-import BlankPage from "../../stories/screens/BlankPage";
+import BlankPage from "../../screens/BlankPage";
 import { NavigationScreenProps } from "react-navigation";
 
 export interface Props extends NavigationScreenProps { }

@@ -1,12 +1,13 @@
 import Raven from "raven-js";
 import { Platform } from "react-native";
+import { Config } from "../Config";
 
 /**
  * please change this DSN token config in your own APP
  */
 
 Raven
-  .config("https://358f593f19344f219d06a59b6321f17d:32f6820621b147f59f66d5510ff0ffe3@sentry.fornever.org/2", {
+  .config(Config.SENTRY_URL, {
     allowSecretKey: true,
     autoBreadcrumbs: {
       xhr: false
@@ -31,8 +32,12 @@ Raven
   });
 
 
-export const info = (msg: string) => Raven.captureMessage(msg, { level: "info" });
+export const RavenLog = (msg: string) => Raven.captureMessage(msg, {
+  level: "info"
+});
 
-export const error = (msg: string) => Raven.captureMessage(msg);
+export const RavenError = (err: Error, options = {}) => Raven.captureException(err, options);
 
-export { Raven };
+export {
+  Raven
+};

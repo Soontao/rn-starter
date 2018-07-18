@@ -1,6 +1,7 @@
 // @flow
 import * as React from "react";
 import { Container, Content, Header, Body, Title, Button, Text, View, Icon, Footer } from "native-base";
+import { Config } from "../../library/Config";
 
 export interface Props {
 	loginForm: any,

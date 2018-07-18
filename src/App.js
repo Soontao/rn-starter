@@ -8,8 +8,7 @@ import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
 import { ErrorFallback } from "./components/ErrorFallback";
 import "./library/NetworkDebugger";
-import "./library/config";
-import "./library/Sentry/index";
+import "./library/Sentry";
 
 const Drawer = DrawerNavigator(
 	{

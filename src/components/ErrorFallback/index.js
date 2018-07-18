@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Raven } from "../../library/Sentry/index";
+import { Raven, RavenError } from "../../library/Sentry/index";
 import { View, Text } from "react-native";
 
 
@@ -10,7 +10,7 @@ export class ErrorFallback<P={}, S={}, SS=any> extends Component<P, S, SS> {
   }
 
   componentDidCatch(error, info) {
-    Raven.captureException(error, { extra: info });
+    RavenError(error, { extra: info });
     this.setState({ errorOccured: true });
   }
 
