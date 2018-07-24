@@ -31,7 +31,6 @@ class HomeContainer extends React.Component<Props, State> {
 	}
 
 	render() {
-		throw new Error("error what happened");
 		return <Home navigation={this.props.navigation} list={this.props.data} />;
 	}
 }

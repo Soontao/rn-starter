@@ -28,7 +28,7 @@ class Home extends React.Component<Props, State> {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+              onPress={() => this.props.navigation.toggleDrawer()}
             >
               <Icon
                 active

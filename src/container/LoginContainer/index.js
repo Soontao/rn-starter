@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Item, Input, Icon, Toast, Form } from "native-base";
 import { Field, reduxForm } from "redux-form";
-import { NavigationActions, NavigationScreenProps } from "react-navigation";
+import { NavigationActions, NavigationScreenProps,StackActions } from "react-navigation";
 import Login from "../../screens/Login";
 
 const required = value => (value ? undefined : "Required");
@@ -46,7 +46,7 @@ class LoginContainer extends React.Component<Props, State> {
 
   login() {
     if (this.props.valid) {
-      this.props.navigation.dispatch(NavigationActions.reset({
+      this.props.navigation.dispatch(StackActions.reset({
         index: 0,
         actions: [NavigationActions.navigate({ routeName: "Drawer" })],
       }));

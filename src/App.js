@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { StackNavigator, DrawerNavigator } from "react-navigation";
+import { createDrawerNavigator, createStackNavigator } from "react-navigation";
 import { Root, Toast, ActionSheet } from "native-base";
 import Login from "./container/LoginContainer";
 import Home from "./container/HomeContainer";
@@ -10,7 +10,7 @@ import { ErrorFallback } from "./components/ErrorFallback";
 import "./library/NetworkDebugger";
 import "./library/Sentry";
 
-const Drawer = DrawerNavigator(
+const Drawer = createDrawerNavigator(
 	{
 		Home: { screen: Home },
 	},
@@ -20,7 +20,7 @@ const Drawer = DrawerNavigator(
 	}
 );
 
-const App = StackNavigator(
+const App = createStackNavigator(
 	{
 		Login: { screen: Login },
 		BlankPage: { screen: BlankPage },
