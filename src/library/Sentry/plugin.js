@@ -18,7 +18,6 @@
  *
  */
 import { NativeModules } from "react-native";
-import { Sentry } from "./index";
 
 function wrappedCallback(callback) {
   function dataCallback(data, original) {
@@ -52,8 +51,7 @@ function normalizeUrl(url, pathStripRe) {
 function urlencode(obj) {
   var pairs = [];
   for (var key in obj) {
-    if ({}.hasOwnProperty.call(obj, key))
-      {pairs.push(encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]));}
+    if ({}.hasOwnProperty.call(obj, key)) { pairs.push(encodeURIComponent(key) + "=" + encodeURIComponent(obj[key])); }
   }
   return pairs.join("&");
 }
@@ -82,9 +80,9 @@ function ReactNativeRavenPlugin(Raven, options, internalDataCallback) {
     // Check for a previously persisted payload, and report it.
     ReactNativeRavenPlugin._restorePayload().then(function (payload) {
       options.onInitialize && options.onInitialize(payload);
-      if (!payload) {return;}
+      if (!payload) { return; }
       Raven._sendProcessedPayload(payload, function (error) {
-        if (error) {return;} // Try again next launch.
+        if (error) { return; } // Try again next launch.
         ReactNativeRavenPlugin._clearPayload();
       });
     }).catch(function () { });
@@ -156,15 +154,8 @@ function ReactNativeRavenPlugin(Raven, options, internalDataCallback) {
       captureOptions[FATAL_ERROR_KEY] = error;
     }
     Raven.captureException(error, captureOptions);
-    if (options.nativeClientAvailable) {
-      // We always want to tunnel errors to the default handler
-      Sentry._setInternalEventStored(() => {
-        defaultHandler(error, isFatal);
-      });
-    } else {
-      // if we don't have a native
-      defaultHandler(error, isFatal);
-    }
+    // if we don't have a native
+    defaultHandler(error, isFatal);
   });
 }
 

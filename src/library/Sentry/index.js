@@ -30,12 +30,13 @@ Raven
     nativeClientAvailable: false,
   });
 
-
 export const RavenLog = (msg: string) => Raven.captureMessage(msg, {
   level: "info"
 });
 
 export const RavenError = (err: Error, options = {}) => Raven.captureException(err, options);
+
+export const RavenBread = (options: Raven.Breadcrumb) => Raven.captureBreadcrumb(options);
 
 export {
   Raven

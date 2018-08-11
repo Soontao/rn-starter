@@ -6,9 +6,7 @@
     "dbaeumer.vscode-eslint",
     "naumovs.color-highlight",
     "CoenraadS.bracket-pair-colorizer",
-    "wix.vscode-import-cost",
     "formulahendry.auto-close-tag",
-    "formulahendry.auto-rename-tag",
-    "eamodio.gitlens"
+    "formulahendry.auto-rename-tag"
   ]
 }
