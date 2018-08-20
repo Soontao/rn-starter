@@ -55,11 +55,6 @@ log.notice(`\nThe version will be changed:`);
 log.notice(`- from: ${versionCurrent} (${buildCurrent});`, 1);
 log.notice(`- to:   ${version} (${build}).`, 1);
 
-if (version === versionCurrent) {
-  log.warning('\nNothing to change in the version. Canceled.');
-  process.exit();
-}
-
 changeBuildInPackage(pathToPackage, build)
 
 if (iosDirectoryExist) {
