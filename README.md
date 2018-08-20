@@ -9,7 +9,7 @@ with following libs:
 * RN 0.55, Redux (with persist), Form, React Navigation ...
 * NativeBase components
 * flow type check
-* Expo 27 (only for preview)
+* Expo 28 (only for preview)
 * Jest unit tests
 * Sentry error log
 
@@ -82,7 +82,7 @@ or
 
 ```text
 
-feat(add-scan-module):
+feat(add-scan-module): some message
 BREAKING CHANGE: scan module is ....
 
 ```
