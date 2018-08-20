@@ -80,12 +80,12 @@ please following format:
 
 or
 
-`text
+```text
 
 feat(add-scan-module):
 BREAKING CHANGE: scan module is ....
 
-`
+```
 
 ## comments
 
