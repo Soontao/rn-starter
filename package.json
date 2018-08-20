@@ -12,6 +12,7 @@
     "node": ">=6"
   },
   "devDependencies": {
+    "cycle-import-check": "^1.0.11",
     "babel-eslint": "8.2.3",
     "babel-preset-react-native": "^4.0.0",
     "eslint": "4.19.1",
@@ -37,7 +38,7 @@
     "jest": "node node_modules/jest/bin/jest.js",
     "name": "node .scripts/change-name.js",
     "version:up": "node .scripts/version-up.js --patch --keep",
-    "release": "node .scripts/version-up.js --patch --keep && standard-version --no-verify",
+    "release": "node .scripts/version-up.js --patch --keep && standard-version --no-verify && git push --follow-tags origin master",
     "precommit": "iscan && npm run test"
   },
   "jest": {
@@ -52,7 +53,6 @@
     }
   },
   "dependencies": {
-    "cycle-import-check": "^1.0.11",
     "expo": "28.0.0",
     "lodash": "4.17.10",
     "native-base": "2.6.1",

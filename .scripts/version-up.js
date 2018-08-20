@@ -18,6 +18,7 @@ const pathToGradle = argv.pathToGradle || `${pathToRoot}/android/app/build.gradl
 // handle case of several plist files
 const pathsToPlists = Array.isArray(pathToPlist) ? pathToPlist : [pathToPlist];
 
+// detect directory exists
 const androidDirectoryExist = existsSync(`${pathToRoot}/android`)
 const iosDirectoryExist = existsSync(`${pathToRoot}/ios`)
 
