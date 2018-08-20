@@ -1,3 +1,8 @@
+/**
+ * sync version from package.json to gradle & info.plist
+ */
+
+
 'use strict';
 
 const fs = require('fs');
@@ -25,10 +30,7 @@ const iosDirectoryExist = existsSync(`${pathToRoot}/ios`)
 // getting next version
 const versionCurrent = info.version;
 const versions = helpers.versions(versionCurrent);
-let major = argv.keep ? versions[0] : helpers.version(versions[0], argv.major);
-let minor = argv.keep ? versions[1] : helpers.version(versions[1], argv.minor, argv.major);
-let patch = argv.keep ? versions[2] : helpers.version(versions[2], argv.patch, argv.major || argv.minor);
-const version = `${major}.${minor}.${patch}`;
+const version = `${versions[0]}.${versions[1]}.${versions[2]}`;
 
 // getting next build number
 const buildCurrent = info.build;
@@ -57,8 +59,6 @@ if (version === versionCurrent) {
   log.warning('\nNothing to change in the version. Canceled.');
   process.exit();
 }
-
-helpers.changeVersionInPackage(pathToPackage, version);
 
 changeBuildInPackage(pathToPackage, build)
 

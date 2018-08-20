@@ -37,8 +37,7 @@
     "test": "npm run jest && flow && eslint .",
     "jest": "node node_modules/jest/bin/jest.js",
     "name": "node .scripts/change-name.js",
-    "version:up": "node .scripts/version-up.js --patch --keep",
-    "release": "node .scripts/version-up.js --patch --keep && standard-version --no-verify && git push --follow-tags origin master",
+    "release": "standard-version --no-verify && node .scripts/update-version.js && git push --follow-tags origin master",
     "precommit": "iscan && npm run test"
   },
   "jest": {
