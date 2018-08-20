@@ -55,7 +55,7 @@ I pre-defined some workspace settings in .vscode, and hope you like it.
 
 ## sentry error log
 
-I introduced Sentry in this project for error log, for your own project, please change the DSN of `library/Sentry/index.js`, and use 
+I introduced Sentry in this project for error log, for your own project, please change the DSN of `library/Sentry/index.js`, and use
 
 * Sentry.captureMessage
 * Sentry.captureException
@@ -63,13 +63,29 @@ I introduced Sentry in this project for error log, for your own project, please 
 
 methods to upload some messages to sentry server.
 
-And you can use 
+And you can use
 
 * Sentry.setUserContext
 * Sentry.setTagsContext
 * Sentry.setVersion
 
 methods to set messages context env
+
+## git commits
+
+please following format:
+
+* feat(user-module): enhance user module
+* fix(login): login logic error
+
+or
+
+`text
+
+feat(add-scan-module):
+BREAKING CHANGE: scan module is ....
+
+`
 
 ## comments
 
