@@ -4,7 +4,8 @@
   "author": {
     "name": "Theo Sun"
   },
-  "version": "1.1.0",
+  "version": "1.1.6",
+  "build": 4,
   "private": true,
   "main": "index.expo.js",
   "engines": {
@@ -24,7 +25,9 @@
     "husky": "0.14.3",
     "jest": "22.4.3",
     "react-native-scripts": "1.13.2",
-    "react-test-renderer": "16.3.2"
+    "react-native-version-up": "^1.0.9",
+    "react-test-renderer": "16.3.2",
+    "standard-version": "^4.4.0"
   },
   "scripts": {
     "start": "react-native-scripts start",
@@ -32,7 +35,9 @@
     "ios": "react-native run-ios",
     "test": "npm run jest && flow && eslint .",
     "jest": "node node_modules/jest/bin/jest.js",
-    "newName": "node .scripts/changeName.js",
+    "name": "node .scripts/change-name.js",
+    "version:up": "node .scripts/version-up.js --patch --keep",
+    "release": "node .scripts/version-up.js --patch --keep && standard-version --no-verify",
     "precommit": "iscan && npm run test"
   },
   "jest": {
