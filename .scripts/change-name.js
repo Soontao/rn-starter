@@ -2,7 +2,7 @@ var package = require("../package")
 var { exit } = require("process")
 var readline = require("readline");
 var { join } = require("path")
-var { readFileSync, writeFileSync, existsSync } = require("fs")
+var { readFileSync, writeFileSync, existsSync, unlinkSync } = require("fs")
 var cl = readline.createInterface(process.stdin, process.stdout);
 
 var question = function (q) {
@@ -13,6 +13,7 @@ var question = function (q) {
   });
 };
 
+const CHANGELOG_PATH = join(__dirname, "../CHANGELOG.md")
 const APP_JSON_PATH = join(__dirname, "../app.json")
 const PACKAGE_JSON_PATH = join(__dirname, "../package.json")
 const ANDROID_PROJECT_PATH = join(__dirname, "../android")
@@ -23,9 +24,12 @@ var changeProjectName = function (newName) {
   var appJson = require(APP_JSON_PATH)
   var packageJson = require(PACKAGE_JSON_PATH)
   appJson.name = newName;
+  appJson.build = 0;
+  appJson.version = "1.0.0";
   appJson.displayName = newName;
   appJson.expo.slug = newName;
   packageJson.name = newName;
+  unlinkSync(CHANGELOG_PATH)
   writeFileSync(APP_JSON_PATH, JSON.stringify(appJson, null, 2))
   writeFileSync(PACKAGE_JSON_PATH, JSON.stringify(package, null, 2))
   return;

@@ -9,7 +9,7 @@ with following libs:
 * RN 0.55, Redux (with persist), Form, React Navigation ...
 * NativeBase components
 * flow type check
-* Expo 28 (only for preview)
+* Expo 27 (only for preview)
 * Jest unit tests
 * Sentry error log
 
