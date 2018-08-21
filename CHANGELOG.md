@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.4"></a>
+## [1.4.4](https://github.com/Soontao/rn-starter/compare/v1.4.3...v1.4.4) (2018-08-21)
+
+
+### Bug Fixes
+
+* **scripts:** change upgrade script ([2ffa20c](https://github.com/Soontao/rn-starter/commit/2ffa20c))
+* **scripts:** QR code not show ([960f858](https://github.com/Soontao/rn-starter/commit/960f858))
+
+
+
 <a name="1.4.3"></a>
 ## [1.4.3](https://github.com/Soontao/rn-starter/compare/v1.4.2...v1.4.3) (2018-08-21)
 

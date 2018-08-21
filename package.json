@@ -4,8 +4,8 @@
   "author": {
     "name": "Theo Sun"
   },
-  "version": "1.4.3",
-  "build": 6,
+  "version": "1.4.4",
+  "build": 7,
   "private": true,
   "main": "index.expo.js",
   "engines": {
