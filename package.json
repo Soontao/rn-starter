@@ -12,6 +12,8 @@
     "node": ">=6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
     "cycle-import-check": "^1.0.11",
     "babel-eslint": "8.2.3",
     "babel-preset-react-native": "^4.0.0",
@@ -36,9 +38,14 @@
     "ios": "react-native run-ios",
     "test": "npm run jest && flow && eslint .",
     "jest": "node node_modules/jest/bin/jest.js",
+    "android:build": "cd android && ./gradlew clean assembleRelease",
+    "android:buildw": "cd android && .\\gradlew.bat clean assembleRelease",
+    "ios:build": "bash xcodebuild.sh",
+    "ios:run-release": "node node_modules/react-native/local-cli/cli.js run-ios --configuration Release",
     "name": "node .scripts/change-name.js",
     "release": "standard-version --no-verify && node .scripts/update-version.js && git push --follow-tags origin master",
-    "precommit": "iscan && npm run test"
+    "precommit": "iscan && npm run test",
+    "commitmsg": "commitlint -E GIT_PARAMS"
   },
   "jest": {
     "preset": "react-native",
