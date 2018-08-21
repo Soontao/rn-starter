@@ -1,5 +1,6 @@
 var package = require("../package")
 var { exit } = require("process")
+var { spawnSync } = require("child_process")
 var readline = require("readline");
 var { join } = require("path")
 var { readFileSync, writeFileSync, existsSync, unlinkSync } = require("fs")
@@ -24,12 +25,14 @@ var changeProjectName = function (newName) {
   var appJson = require(APP_JSON_PATH)
   var packageJson = require(PACKAGE_JSON_PATH)
   appJson.name = newName;
-  appJson.build = 0;
-  appJson.version = "1.0.0";
   appJson.displayName = newName;
   appJson.expo.slug = newName;
   packageJson.name = newName;
-  unlinkSync(CHANGELOG_PATH)
+  packageJson.build = 0;
+  packageJson.version = "1.0.0";
+  if (existsSync(CHANGELOG_PATH)) {
+    unlinkSync(CHANGELOG_PATH)
+  }
   writeFileSync(APP_JSON_PATH, JSON.stringify(appJson, null, 2))
   writeFileSync(PACKAGE_JSON_PATH, JSON.stringify(package, null, 2))
   return;
@@ -43,6 +46,7 @@ var changeProjectName = function (newName) {
       if (NAME_REG.test(newName)) {
         changeProjectName(newName)
         console.log(`project name has changed to ${newName}`)
+        console.log("please run 'generate-native-project' to generate ios/android folder")
         exit(0)
       } else {
         console.log("not acceptable name format")

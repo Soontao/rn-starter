@@ -27,6 +27,7 @@
     "flow-typed": "2.4.0",
     "husky": "0.14.3",
     "jest": "22.4.3",
+    "react-native-cli": "^2.0.1",
     "react-native-scripts": "^1.12.1",
     "react-native-version-up": "^1.0.9",
     "react-test-renderer": "16.3.2",
@@ -43,6 +44,7 @@
     "ios:build": "bash xcodebuild.sh",
     "ios:run-release": "node node_modules/react-native/local-cli/cli.js run-ios --configuration Release",
     "name": "node .scripts/change-name.js",
+    "generate-native-project": "react-native upgrade",
     "release": "standard-version --no-verify && git push --follow-tags origin master",
     "precommit": "iscan && npm run test",
     "commitmsg": "commitlint -E GIT_PARAMS"
