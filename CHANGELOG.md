@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.3"></a>
+## [1.4.3](https://github.com/Soontao/rn-starter/compare/v1.4.2...v1.4.3) (2018-08-21)
+
+
+### Bug Fixes
+
+* **release:** log ([2e23413](https://github.com/Soontao/rn-starter/commit/2e23413))
+
+
+
 <a name="1.4.2"></a>
 ## [1.4.2](https://github.com/Soontao/rn-starter/compare/v1.4.1...v1.4.2) (2018-08-21)
 
