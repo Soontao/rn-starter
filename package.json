@@ -5,7 +5,7 @@
     "name": "Theo Sun"
   },
   "version": "1.4.2",
-  "build": 4,
+  "build": 5,
   "private": true,
   "main": "index.expo.js",
   "engines": {
@@ -43,9 +43,14 @@
     "ios:build": "bash xcodebuild.sh",
     "ios:run-release": "node node_modules/react-native/local-cli/cli.js run-ios --configuration Release",
     "name": "node .scripts/change-name.js",
-    "release": "standard-version --no-verify && node .scripts/update-version.js && git push --follow-tags origin master",
+    "release": "standard-version --no-verify && git push --follow-tags origin master",
     "precommit": "iscan && npm run test",
     "commitmsg": "commitlint -E GIT_PARAMS"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "node .scripts/update-version.js"
+    }
   },
   "jest": {
     "preset": "react-native",
