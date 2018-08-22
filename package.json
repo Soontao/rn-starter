@@ -43,7 +43,7 @@
     "ios:build": "bash xcodebuild.sh",
     "ios:run-release": "node node_modules/react-native/local-cli/cli.js run-ios --configuration Release",
     "name": "node .scripts/change-name.js",
-    "release": "standard-version --no-verify && git push --follow-tags origin master",
+    "release": "standard-version --commit-all --no-verify && git push --follow-tags origin master",
     "precommit": "iscan && npm run test",
     "commitmsg": "commitlint -E GIT_PARAMS"
   },

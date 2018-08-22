@@ -46,6 +46,10 @@ const changeBuildInPackage = (path, build) => {
   fs.writeFileSync(path, packageContent, 'utf8');
 }
 
+const gitAdd = (path) => {
+  execSync(`git add ${path}`);
+};
+
 log.info('\nI\'m going to increase the version in:');
 log.info(`- package.json (${pathToPackage});`, 1);
 log.info(`- ios project (${pathsToPlists.join(', ')});`, 1);
@@ -61,6 +65,7 @@ if (iosDirectoryExist) {
 
   pathsToPlists.forEach(pathToPlist => {
     helpers.changeVersionAndBuildInPlist(pathToPlist, version, build);
+    gitAdd(p);
   });
 
 }
@@ -68,6 +73,7 @@ if (iosDirectoryExist) {
 if (androidDirectoryExist) {
 
   helpers.changeVersionAndBuildInGradle(pathToGradle, version, build);
+  gitAdd(pathToGradle);
 
 }
 
