@@ -145,7 +145,6 @@ function ReactNativeRavenPlugin(Raven, options, internalDataCallback) {
     var shouldHandleFatal = isFatal && !global.__DEV__;
     if (shouldHandleFatal) {
       if (handlingFatal) {
-        console.log("Encountered multiple fatals in a row. The latest:", error);
         return;
       }
       handlingFatal = true;

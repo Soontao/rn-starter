@@ -10,7 +10,6 @@ export function createRavenMiddleware(cfg = {}, options = {}) {
     const {
       actionTransformer = identity,
       stateTransformer = identity,
-      logger = console.error.bind(console, "[redux-raven-middleware] Reporting error to Sentry:")
     } = options;
 
     try {
@@ -21,7 +20,6 @@ export function createRavenMiddleware(cfg = {}, options = {}) {
 
       return next(action);
     } catch (err) {
-      logger(err);
 
       // Send the report.
       Raven.captureException(err, {
