@@ -1,7 +1,8 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0",
+    "sdkVersion": "31.0.0",
     "slug": "rnstarter",
+    "privacy": "unlisted",
     "loading": {
       "hideExponentText": false,
       "icon": "./assets/loading.png"
@@ -20,5 +21,8 @@
     }
   },
   "name": "rnstarter",
-  "displayName": "rnstarter"
+  "displayName": "rnstarter",
+  "ios": {
+    "supportsTablet": true
+  }
 }
